@@ -1,15 +1,25 @@
+import { useContext, useEffect, useState } from 'react';
 import './App.css';
+import { FormContext } from './context/FormContext';
+import FormNav from './components/FormNav';
 import PlanForm from './components/PlanForm';
 
 function App() {
+  const [step, setStep] = useState(1);
+
+  useEffect(() => {
+    console.log("step: ", step);
+  })
   return (
     <>
-      <header className="app-header">
-        nav
-      </header>
-      <main className="main">
-        <PlanForm></PlanForm>
-      </main>
+      <FormContext.Provider value={step}>
+        <header className="app-header">
+          <FormNav onSelect={setStep} />
+        </header>
+        <main className="main">
+          <PlanForm />
+        </main>
+      </FormContext.Provider>
     </>
   );
 }
