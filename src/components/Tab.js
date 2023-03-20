@@ -1,4 +1,18 @@
+import './Tab.css';
+import cx from 'classnames';
+import { useEffect } from 'react';
+
 function Tab({id, title, index, selectedTab, panelId, onSelect}) {
+
+  const tabClass = cx({
+    tab: true,
+    'tab--active': selectedTab === index
+  });
+
+  useEffect(() => {
+    console.log("selected tab", selectedTab);
+    console.log(index);
+  })
 
   return (
     <li role="presentation">
@@ -7,10 +21,11 @@ function Tab({id, title, index, selectedTab, panelId, onSelect}) {
         id={id}
         aria-selected={selectedTab === index}
         aria-controls={panelId}
-        className="plan-form-nav-button"
+        className={tabClass}
         onClick={() => onSelect(index)}>
-        <span className="plan-form-nav-eyebrow">Step {index}</span>
-        {title}
+          <span className={`tab__index`} aria-hidden="true">{index}</span>
+          <span className={`tab__eyebrow`}>Step {index}</span>
+          <span className={`tab__text`}>{title}</span>
       </button>
     </li>
   )

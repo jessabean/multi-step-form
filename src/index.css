@@ -1,8 +1,62 @@
+:root {
+  --color-white: #FFFFFF;
+  --color-blue: #022959;
+  --color-blue-light: #ABBCFF;
+  --color-blue-extralight: #BEE2FD;
+  --color-orange: #FFAF7E;
+  --color-pink: #F9818E;
+  --color-purple: #483EFF;
+  --color-red: #EE374A;
+  --color-gray-mid: #9699AA;
+  --color-gray-light: #D6D9E6;
+  --color-gray-extralight: #F8F9FF;
+  --color-bg: #EFF5FF;
+  --color-border: var(--color-gray-light);
+
+  --space-unit: 1em;
+  --space-xxs:  calc(0.25 * var(--space-unit));
+  --space-xs:   calc(0.375 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1 * var(--space-unit));
+  --space-lg:   calc(1.375 * var(--space-unit));
+  --space-xl:   calc(2 * var(--space-unit));
+  --space-xxl:  calc(3.25 * var(--space-unit));
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url('assets/fonts/Ubuntu-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url('assets/fonts/Ubuntu-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url('assets/fonts/Ubuntu-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 1em;
+  font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

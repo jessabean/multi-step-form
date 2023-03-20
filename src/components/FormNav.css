@@ -1,0 +1,11 @@
+.plan-form-nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.plan-form-nav > * + * {
+  margin-left: var(--space-lg);
+}

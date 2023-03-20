@@ -1,0 +1,50 @@
+.tab {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  color: var(--color-white);
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.tab__index {
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+  display: inline-flex;
+  font-size: 14px;
+  height: 2.25em;
+  width: 2.25em;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.tab--active .tab__index {
+  background-color: var(--color-blue-extralight);
+  border: 1px solid var(--color-blue-extralight);
+  color: var(--color-blue);
+}
+
+@media (min-width: 48em) {
+  
+}
+/* 
+Hide the index number visually, 
+but not from screen readers
+on small screens
+*/
+@media (max-width: 48em) {
+  .tab__eyebrow,
+  .tab__text {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+}

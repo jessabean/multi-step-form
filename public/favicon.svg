@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <mask id="a" width="64" height="64" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <circle cx="32" cy="32" r="32" fill="#D9D9D9"/>
+  </mask>
+  <g mask="url(#a)">
+    <path fill="#483EFF" d="M-64.802 64.453H88.802V-6H-64.802z"/>
+    <mask id="b" width="154" height="71" x="-65" y="-6" maskUnits="userSpaceOnUse" style="mask-type:luminance">
+      <path fill="#fff" d="M-64.802 64.453H88.802V-6H-64.802z"/>
+    </mask>
+    <g mask="url(#b)">
+      <ellipse cx="99.345" cy="70.079" fill="#6259FF" rx="99.345" ry="70.079" transform="scale(1 -1) rotate(73 84.312 -54.683)"/>
+      <ellipse cx="68.486" cy="48.331" fill="#F9818E" rx="68.486" ry="48.331" transform="scale(1 -1) rotate(-19 -43.748 107.43)"/>
+      <path stroke="#fff" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="5" d="m23.8 19.737 6.252 6.369M49.825 16.505l-7.37 6.19M36.917 8.012 32.845-.71"/>
+    </g>
+  </g>
+</svg>
