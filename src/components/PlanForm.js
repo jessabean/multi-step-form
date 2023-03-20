@@ -1,10 +1,14 @@
+import { useContext } from 'react';
 import './PlanForm.css';
+import TabPanel from './TabPanel';
+import { FormContext } from '../context/FormContext';
 
 function PlanForm() {
+  const context = useContext(FormContext);
+
   return (
     <form className='plan-form'>
-      <fieldset className="plan-form-section plan-form-section--1">
-        <legend>Personal Info</legend>
+      <TabPanel id="infoPanel" index={1} tabId="panel1tab" selectedTab={context.currentStep} title="Personal Info">
         <p className="plan-form-section-info">Please provide your name, email address, and phone number.</p>
 
         <label className="form-label" htmlFor="plan-form-name">Name</label>
@@ -15,10 +19,9 @@ function PlanForm() {
 
         <label className="form-label" htmlFor="plan-form-phone">Phone Number</label>
         <input className="input-text" type="phone" id="plan-form-phone" placeholder="e.g. +1 234-567-8900" />
-      </fieldset>
+      </TabPanel>
 
-      <fieldset className="plan-form-section plan-form-section--2">
-        <legend>Select Your Plan</legend>
+      <TabPanel id="planPanel" index={2} tabId="panel2tab" selectedTab={context.currentStep} title="Select Your Plan">
         <p className="plan-form-section-info">You have the option of monthly or yearly billing.</p>
 
         <label className="form-label" htmlFor="plan-form-arcade">
@@ -38,11 +41,10 @@ function PlanForm() {
           <p className="form-label-supplement">$15/mo</p>
           <input className="input-radio" type="radio" id="plan-form-pro" />
         </label>
-      </fieldset>
+      </TabPanel>
 
-      <fieldset className="plan-form-section plan-form-section--3">
-        <legend>Pick Add-Ons</legend>
-        <p className="plan-form-section-info">Add-ons help enhance your gaming experience.</p>
+      <TabPanel id="addOnsPanel" index={3} tabId="panel3tab" selectedTab={context.currentStep} title="Pick Add-Ons">
+      <p className="plan-form-section-info">Add-ons help enhance your gaming experience.</p>
         
         <label className="form-label" htmlFor="plan-form-name">
           <span className="form-label-text">Online Service</span>
@@ -64,10 +66,9 @@ function PlanForm() {
           <span className="add-on-price">+$2/mo</span>
           <input className="input-checkbox" type="checkbox" id="plan-form-profile"  />
         </label>
-      </fieldset>
+      </TabPanel>
 
-      <fieldset className="plan-form-section plan-form-section--4">
-        <legend>Finishing Up</legend>
+      <TabPanel id="summaryPanel" index={4} tabId="panel4tab" selectedTab={context.currentStep} title="Finishing Up">
         <p className="plan-form-section-info">Double-check everything looks OK before confirming.</p>
 
         <table className="total-line-table">
@@ -103,8 +104,7 @@ function PlanForm() {
             </tr>
           </tfoot>
         </table>
-      </fieldset>
-
+      </TabPanel>
     </form>
   );
 }
