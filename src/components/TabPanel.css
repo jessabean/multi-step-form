@@ -1,3 +1,16 @@
 .tab-panel {
-  
+  font-size: var(--text-md);
+}
+
+.tab-panel__title {
+  font-size: var(--text-lg);
+  font-weight: bold;
+  color: var(--color-blue);
+  margin-bottom: var(--space-xs);
+}
+
+@media (min-width: 48em) {
+  .tab-panel__title {
+    font-size: var(--text-xl);
+  }
 }

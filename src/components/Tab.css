@@ -14,7 +14,7 @@
   border: 1px solid var(--color-white);
   border-radius: 100%;
   display: inline-flex;
-  font-size: 14px;
+  font-size: var(--text-sm);
   height: 2.25em;
   width: 2.25em;
   align-items: center;
@@ -49,12 +49,12 @@
 
   .tab__eyebrow {
     color: var(--color-blue-light);
-    font-size: 0.75rem;
+    font-size: var(--text-xs);
   }
 
   .tab__text {
     font-weight: bold;
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
   }
 }
 

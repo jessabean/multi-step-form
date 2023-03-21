@@ -13,6 +13,7 @@ main {
   border-radius: var(--border-radius);
   margin: 0 auto;
   max-width: 90vw;
+  padding: var(--space-xl) var(--space-lg);
   position: relative;
   top: -4.375em;
 }
