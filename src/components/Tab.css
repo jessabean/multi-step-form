@@ -29,8 +29,35 @@
 }
 
 @media (min-width: 48em) {
-  
+  .tab {
+    display: grid;
+    grid-column-gap: var(--space-md);
+    grid-template-columns: auto 1fr;
+    width: 100%;
+  }
+
+  .tab__index {
+    grid-row: span 2;
+  }
+
+  .tab__eyebrow,
+  .tab__text {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .tab__eyebrow {
+    color: var(--color-blue-light);
+    font-size: 0.75rem;
+  }
+
+  .tab__text {
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
 }
+
 /* 
 Hide the index number visually, 
 but not from screen readers

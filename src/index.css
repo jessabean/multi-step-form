@@ -21,6 +21,8 @@
   --space-lg:   calc(1.375 * var(--space-unit));
   --space-xl:   calc(2 * var(--space-unit));
   --space-xxl:  calc(3.25 * var(--space-unit));
+
+  --border-radius: 10px;
 }
 
 @font-face {
@@ -59,6 +61,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
 }
 
 code {

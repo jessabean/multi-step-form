@@ -9,3 +9,14 @@
 .plan-form-nav > * + * {
   margin-left: var(--space-lg);
 }
+
+@media (min-width: 48em) {
+  .plan-form-nav {
+    flex-direction: column;
+  }
+
+  .plan-form-nav > * + * {
+    margin-left: 0;
+    margin-top: var(--space-lg);
+  }
+}

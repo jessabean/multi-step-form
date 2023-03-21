@@ -42,12 +42,14 @@ function App() {
   return (
     <>
       <FormContext.Provider value={formSettings}>
-        <header className="app-header">
-          <FormNav tabs={tabSettings} />
-        </header>
-        <main className="main">
-          <PlanForm />
-        </main>
+        <div className="app-wrapper">
+          <header className="app-header">
+            <FormNav tabs={tabSettings} />
+          </header>
+          <main className="main">
+            <PlanForm />
+          </main>
+        </div>
       </FormContext.Provider>
     </>
   );
