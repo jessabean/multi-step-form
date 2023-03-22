@@ -1,4 +1,47 @@
+.plan-form {
+  max-width: 450px;
+  height: 100%;
+}
+
 .form__section-info {
   color: var(--color-gray-mid);
   margin-bottom: var(--space-lg);
+}
+
+.form__control +
+.form__control {
+  margin-top: var(--space-md);
+}
+
+.form__label {
+  color: var(--color-blue);
+  display: block;
+  font-size: var(--text-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.input__text {
+  border: 1px solid var(--color-gray-light);
+  border-radius: 4px;
+  font-size: var(--text-md);
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  width: 100%;
+}
+
+.input__text:focus {
+  border-color: var(--color-purple);
+  outline: none;
+}
+
+.form__button--transparent {
+  background-color: transparent;
+  border: none;
+  color: var(--color-gray-mid);
+}
+
+@media (min-width: 48em) {
+  .form__label {
+    font-size: var(--text-sm);
+  }
 }

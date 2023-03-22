@@ -2,6 +2,12 @@
   font-size: var(--text-md);
 }
 
+.tab-panel--active {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .tab-panel__title {
   font-size: var(--text-lg);
   font-weight: bold;
@@ -9,8 +15,30 @@
   margin-bottom: var(--space-xs);
 }
 
+.tab-panel__footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 1em;
+}
+
+.tab-panel__footer button:nth-child(1):nth-last-child(1) {
+	margin-left: auto;
+}
+
 @media (min-width: 48em) {
   .tab-panel__title {
     font-size: var(--text-xl);
+  }
+
+  .tab-panel__footer {
+    margin-top: auto;
+    padding: 0;
+    position: static;
+    background-color: transparent;
   }
 }

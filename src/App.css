@@ -23,7 +23,7 @@ main {
     background-color: var(--color-white);
     border-radius: var(--border-radius);
     display: grid;
-    grid-template-columns: 17em 1fr;
+    grid-template-columns: 17.125em 1fr;
     grid-column-gap: 6.25em;
     min-height: 35em;
     max-width: 58em;

@@ -9,11 +9,6 @@ function Tab({id, title, index, selectedTab, panelId, onSelect}) {
     'tab--active': selectedTab === index
   });
 
-  useEffect(() => {
-    console.log("selected tab", selectedTab);
-    console.log(index);
-  })
-
   return (
     <li role="presentation">
       <button 

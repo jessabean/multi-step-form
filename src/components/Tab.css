@@ -50,6 +50,7 @@
   .tab__eyebrow {
     color: var(--color-blue-light);
     font-size: var(--text-xs);
+    margin-bottom: var(--space-xxs);
   }
 
   .tab__text {
