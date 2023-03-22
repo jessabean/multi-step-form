@@ -34,10 +34,82 @@
   outline: none;
 }
 
+/*
+  custom form controls
+*/
+
+.form__control--icon-radio {
+  position: relative;
+}
+
+.form__control--icon-radio label {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-gray-light);
+  padding: var(--space-md);
+  border-radius: 8px;
+  background-color: transparent;
+  background-size: 40px 40px;
+  background-position: 1em 1em;
+  background-repeat: no-repeat;
+}
+
+.form__control--icon-radio label:hover {
+  cursor: pointer;
+}
+
+.form__control--arcade label {
+  background-image: url('../assets/images/icon-arcade.svg');
+}
+
+.form__control--advanced label {
+  background-image: url('../assets/images/icon-advanced.svg');
+}
+
+.form__control--pro label {
+  background-image: url('../assets/images/icon-pro.svg');
+}
+
+.form__control--icon-radio input[type="radio"] {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--space-md);
+  opacity: 0;
+}
+
+.form__control--icon-radio input[type="radio"]:checked + label {
+  background-color: var(--color-gray-extralight);
+  border: 1px solid var(--color-purple);
+}
+
+.form__label-text,
+.form__label-supplement {
+  display: block;
+  padding-left: 60px;
+}
+
+.form__label-text {
+  color: var(--color-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.form__label-supplement {
+  color: var(--color-gray-mid);
+  font-size: var(--text-sm);
+}
+
 .form__button--transparent {
   background-color: transparent;
   border: none;
   color: var(--color-gray-mid);
+  padding: 0;
+}
+
+.form__button--transparent:hover {
+  color: var(--color-blue);
 }
 
 @media (min-width: 48em) {

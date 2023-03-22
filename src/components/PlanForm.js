@@ -36,23 +36,47 @@ function PlanForm() {
         <div className="tab-panel__body">
           <p className="form__section-info">You have the option of monthly or yearly billing.</p>
 
-          <label className="form__control form__control--icon-radio" htmlFor="plan-form-arcade">
-            <span className="form__label-text">Arcade</span>
-            <p className="form__label-supplement">$9/mo</p>
-            <input className="input-radio" type="radio" id="plan-form-arcade" />
+          <div className="form__control form__control--icon-radio form__control--arcade">
+            <input className="input-radio" type="radio" id="plan-form-arcade" name="plan" />
+            <label htmlFor="plan-form-arcade">
+              <strong className="form__label-text">Arcade</strong>
+              <span className="form__label-supplement">$9/mo</span>
+            </label>
+          </div>
+
+          <div className="form__control form__control--icon-radio form__control--advanced">
+            <input className="input-radio" type="radio" id="plan-form-advanced" name="plan" />
+            <label htmlFor="plan-form-advanced">
+              <strong className="form__label-text">Advanced</strong>
+              <span className="form__label-supplement">$12/mo</span>
+            </label>
+          </div>
+
+          <div className="form__control form__control--icon-radio form__control--pro">
+            <input className="input-radio" type="radio" id="plan-form-pro" name="plan" />
+            <label htmlFor="plan-form-pro">
+              <strong className="form__label-text">Pro</strong>
+              <span className="form__label-supplement">$15/mo</span>
+            </label>
+          </div>
+
+          {/* <label className="form__control form__control--icon-radio form__control--arcade" htmlFor="plan-form-arcade">
+            <strong className="form__label-text">Arcade</strong>
+            <span className="form__label-supplement">$9/mo</span>
+            <input className="input-radio" type="radio" id="plan-form-arcade" name="plan" />
           </label>
 
-          <label className="form__control form__control--icon-radio" htmlFor="plan-form-advanced">
-            <span className="form__label-text">Advanced</span>
-            <p className="form__label-supplement">$12/mo</p>
-            <input className="input__radio" type="radio" id="plan-form-advanced" />
+          <label className="form__control form__control--icon-radio form__control--advanced" htmlFor="plan-form-advanced">
+            <strong className="form__label-text">Advanced</strong>
+            <span className="form__label-supplement">$12/mo</span>
+            <input className="input__radio" type="radio" id="plan-form-advanced" name="plan" />
           </label>
 
-          <label className="form__control form__control--icon-radio" htmlFor="plan-form-pro">
-            <span className="form__label-text">Pro</span>
-            <p className="form__label-supplement">$15/mo</p>
-            <input className="input__radio" type="radio" id="plan-form-pro" />
-          </label>
+          <label className="form__control form__control--icon-radio form__control--pro" htmlFor="plan-form-pro">
+            <strong className="form__label-text">Pro</strong>
+            <span className="form__label-supplement">$15/mo</span>
+            <input className="input__radio" type="radio" id="plan-form-pro" name="plan" />
+          </label> */}
         </div>
 
         <div className="tab-panel__footer">
